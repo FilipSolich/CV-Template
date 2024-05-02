@@ -2,6 +2,8 @@
 
 CV Template written in Typst
 
+![Example output](example.png)
+
 ## Compile PDF
 
 ```sh
