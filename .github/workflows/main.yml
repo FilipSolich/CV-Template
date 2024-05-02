@@ -1,0 +1,17 @@
+name: Build CV
+on: push
+jobs:
+  render-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v3
+        with:
+          cache-dependency-path: requirements.typ
+      - run: |
+          typst compile --font-path fonts example.typ cv.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv
+          path: |
+            cv.pdf
