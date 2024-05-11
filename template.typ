@@ -46,7 +46,7 @@
 
 #let CV(lang, personalInfo, languages, jobs, education, projects, certifications) = {
   set document(
-    title: [#personalInfo.name " - CV"],
+    title: [#personalInfo.name - CV],
     author: personalInfo.name,
   )
   set page(paper: "a4", margin: 2cm)
